@@ -5,6 +5,13 @@ module.exports = function SausageLocation(root) {
 	var last = ''
 	root = root || ''
 
+	window.addEventListener('popstate', function() {
+		if (last !== emitter.get()) {
+			last = emitter.get()
+			emitter.emit('hashchange')
+		}
+	})
+
 	function stateChange(functionName, newPath) {
 		if (last !== emitter.get()) {
 			history[functionName]({}, '', joinPath(root, newPath))
