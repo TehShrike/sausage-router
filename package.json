@@ -22,7 +22,7 @@
     "browserify": "11.0.1",
     "browserstack-runner": "0.3.7",
     "browserstack-tape-reporter": "1.0.0",
-    "hash-brown-router": "3.2.1",
+    "hash-brown-router": "3.3.0",
     "tap-browser-color": "0.1.2",
     "tape": "4.2.0",
     "tape-catch": "1.0.6",

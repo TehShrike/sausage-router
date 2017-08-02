@@ -13,8 +13,9 @@ module.exports = function SausageLocation(root) {
 	})
 
 	function stateChange(functionName, newPath) {
-		if (last !== emitter.get()) {
+		if (last !== newPath) {
 			history[functionName]({}, '', joinPath(root, newPath))
+			last = newPath
 			emitter.emit('hashchange')
 		}
 	}
